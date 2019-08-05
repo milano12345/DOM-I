@@ -40,6 +40,7 @@ const siteContent = {
 // Example: Update the img src for the logo
 //Pictures
 let logo = document.getElementById("logo-img");
+
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 document.getElementById("cta-img").setAttribute('src', siteContent["cta"]["img-src"])
@@ -48,65 +49,75 @@ document.getElementById('middle-img').setAttribute('src',siteContent['main-conte
 
 //H1 and button
 
-document.getElementsByTagName('button')[0].innerHTML = "Get Started";
+document.getElementsByTagName('button')[0].textContent = "Get Started";
 
-document.querySelector('h1').innerHTML = 'DOM IS AWESOME!';
+document.querySelector('h1').textContent = 'DOM IS AWESOME!';
 
 // NAV BAR
 
-document.getElementsByTagName('a')[0].innerHTML = 'Services';
+const navItem1 = document.getElementsByTagName('a')[0].textContent = siteContent.nav["nav-item-1"];
 
-document.getElementsByTagName('a')[1].innerHTML = 'Product';
+const navItem2 = document.getElementsByTagName('a')[1].textContent = siteContent.nav["nav-item-2"];
 
-document.getElementsByTagName('a')[2].innerHTML = 'Vision';
+const navItem3 = document.getElementsByTagName('a')[2].textContent = siteContent.nav["nav-item-3"];
 
-document.getElementsByTagName('a')[3].innerHTML = 'Features';
+const navItem4 = document.getElementsByTagName('a')[3].textContent = siteContent.nav["nav-item-4"];
 
-document.getElementsByTagName('a')[4].innerHTML = 'About';
+const navItem5 = document.getElementsByTagName('a')[4].textContent = siteContent.nav["nav-item-5"];
 
-document.getElementsByTagName('a')[5].innerHTML = 'Contact';
 
 //Main Content//
 //H4's
 
-document.getElementsByTagName('h4')[0].innerHTML = 'Features';
+const title1 = document.getElementsByTagName('h4')[0].textContent = siteContent["main-content"]["features-h4"];
 
-document.getElementsByTagName('h4')[1].innerHTML = 'About';
+const title2 = document.getElementsByTagName('h4')[1].textContent = siteContent["main-content"]["about-h4"];
 
-document.getElementsByTagName('h4')[2].innerHTML = 'Services';
+const title3 = document.getElementsByTagName('h4')[2].textContent = siteContent["main-content"]["services-h4"];
 
-document.getElementsByTagName('h4')[3].innerHTML = 'Product';
+const title4 = document.getElementsByTagName('h4')[3].textContent = siteContent["main-content"]["product-h4"];
 
-document.getElementsByTagName('h4')[4].innerHTML = 'Vision';
+const title5 = document.getElementsByTagName('h4')[4].textContent = siteContent["main-content"]["vision-h4"];
 
-document.getElementsByTagName('h4')[5].innerHTML = 'Contact';
 
 //Paragraphs//
 
-document.getElementsByTagName('p')[0].innerHTML = 'Features Reprehenderit laborum est cillum occaecat do amet anim. Irure est labore nisi elit velit consectetur incididunt commodo. Fugiat commodo cupidatat mollit magna nostrud elit enim id elit consectetur et.';
+const p1 = document.getElementsByTagName('p')[0].textContent = siteContent["main-content"]["features-content"];
 
-document.getElementsByTagName('p')[1].innerHTML = 'About Labore id cillum est ipsum sint qui non qui dolore eiusmod tempor. Et aliquipe mollit officia pariatur minim consequat Lorem sint. Mollit consectetur incididunt fugiat et. Occaecat enim eu esse irure pariatur Lorem labore labore et. Lorem laboris exercitation non ipsum nulla duis pariatur irur';
+const p2 = document.getElementsByTagName('p')[1].textContent = siteContent["main-content"]["about-content"];
 
-document.getElementsByTagName('p')[2].innerHTML = 'Services Eu elit mollit laboris elit id irure. Occaecat cupidatat minim commodo pariatur reprehenderit ex veniam pariatur nulla ut magna dolor nulla. Aliqua adipisicing esse non labore Lorem labore duis est cupidatat voluptate. Cillum exercitation deserunt adipisicing nisi. Nisi cupidatatt tempor amet fugiat enim ea irure.';
+const p3 = document.getElementsByTagName('p')[2].textContent =  siteContent["main-content"]["services-content"];
 
-document.getElementsByTagName('p')[3].innerHTML = 'Product Eiusmod quis ullamco adipisicing quis esse velit quis. Ut cillum eu exercitation excepteur proident consequat aliqua cupidatat pariatur deserunt deserunt eu Lorem. Quis quis laboris aute id veniam occaecat nostrud cupidatat exercitation sint minim esse nostrud voluptate. Dolor duis aliquip pariatur exercitation. Incididunt occaecat laborum culpa cupidatat id enim dolore mollit ex aliqua anim tempor.';
+const p4 = document.getElementsByTagName('p')[3].textContent =  siteContent["main-content"]["product-content"];
 
-document.getElementsByTagName('p')[4].innerHTML = 'Vision Quis qui nostrud reprehenderit est dolore sint laboris excepteur tempor ipsum velit consectetur incididunt Lorem. Anim quis esse nisi ex magna officia nostrud. Exercitation qui pariatur dolor ipsum cillum ullamco qui est labore consectetur. Voluptate excepteur exercitation consequat nisi mollit ut exercitation cupidatat officia. Officia cupidatat adipisicing labore sint ad commodo.';
+const p5 = document.getElementsByTagName('p')[4].textContent =  siteContent["main-content"]["vision-content"];
+
 
 //Contact
 
-document.getElementsByTagName('p')[5].innerHTML = "123 Way 456 Street Somewhere, USA";
+const contact1 = document.getElementsByTagName('p')[5].textContent = siteContent.contact.address;
 
-document.getElementsByTagName('p')[6].innerHTML = "1-888-888-8888";
+const contact2 = document.getElementsByTagName('p')[6].textContent = siteContent.contact.phone;
 
-document.getElementsByTagName('p')[7].innerHTML = "Sales@bigtimeballas.gmail.com";
+const contact3 = document.getElementsByTagName('p')[7].textContent = siteContent.contact.email;
 
-document.getElementsByTagName('p')[8].innerHTML = "Copyright 2019 DM Enterpises";
+const contact4 = document.getElementsByTagName('p')[8].textContent = siteContent.footer.copyright;
 
 //## Task 3: Add new content
+
+
 let newColor = document.querySelectorAll("a");
+
 newColor.forEach(link => {
   link.style.color = "green";
 });
+
+var newChild1 = document.createElement('a');
+newChild1.textContent = 'link1';
+document.querySelector('nav').appendChild(newChild1);
+
+var newChild2 = document.createElement('a')
+newChild2.textContent = 'link2'
+document.querySelector('nav').prepend(newChild2);
   
-$( "a" ).prepend( "<a>Test</a>" );
+//boya
